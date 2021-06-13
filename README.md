@@ -19,26 +19,51 @@ This project has two basic apps.
   * Django Web Framework 3.2.4 and Django REST Framework
   * PostgreSQL
  
-### Installation
+## Installation
 
 Clone the repo
 ```python
 $ git clone https://github.com/iyanuashiri/exchange-api.git
 
 $ cd exchange-api
+
+$ source venv/bin/activate
 ```
 
-Run migrations
+## How to Setup 
+
+- Click here to [ALPHAVANTAGE API_KEY](https://www.alphavantage.co/support/#api-key)
+- Change `.env_example` to `.env`
+- Add your `ALPHAVANTAGE_ACCESS_KEY` into your `.env` file
+
+
+## Docker
+
+### Run migrations
+
 ```python
 $ sudo docker-compose exec web python manage.py makemigrations
 
 $ sudo docker-compose exec web python manage.py migrate
 ```
 
-Run server
+### Run docker
 ```python
-$ python manage.py runserver
+$ sudo docker-compose up -d
+
+$ sudo docker-compose exec web python manage.py runserver
+
 ```
+
+### Test coverage
+To run the tests:
+
+```python
+$ sudo docker-compose exec web pytest -v
+```
+
+
+
 Application URL
 http://localhost:8000/
 
@@ -55,24 +80,4 @@ POST http://127.0.0.1:8000/api/v1/quotes/ - Post quotes endpoint
 
 GET http://127.0.0.1:8000/api/v1/quotes/ - List of quotes endpoint 
 
-
-## Docker
-
-### Run migrations
-
-```python
-$ sudo docker-compose exec web python manage.py makemigrations
-
-$ sudo docker-compose exec web python manage.py migrate
-```
-
-
-
-
-### Test coverage
-To run the tests, check your test coverage, and generate a simplified coverage report:
-
-```python
-$ sudo docker-compose exec web pytest -v
-```
 
