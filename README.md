@@ -28,6 +28,8 @@ $ git clone https://github.com/iyanuashiri/exchange-api.git
 $ cd exchange-api
 
 $ source venv/bin/activate
+
+
 ```
 
 ## How to Setup 
@@ -60,6 +62,15 @@ To run the tests:
 
 ```python
 $ sudo docker-compose exec web pytest -v
+```
+
+### Install requirements into virtaul environment
+
+```python
+$ cd exchange_api/app
+
+$ pip install -r requirements.txt
+
 ```
 
 
