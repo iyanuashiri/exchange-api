@@ -24,3 +24,7 @@ class ExchangeListCreateView(generics.ListCreateAPIView):
                                            ask_price=data['9. Ask Price'])
         serializer = self.serializer_class(exchange)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    def get_serializer_class(self, *args, **kwargs):
+        if self.request.method == "GET":
+            return ExchangeSerializer
