@@ -80,6 +80,7 @@ curl --location --request POST 'http://127.0.0.1:8000/api/v1/auth/users/' \
 --form 'password="{{PASSWORD}}"'
 ```
 
+
 POST http://127.0.0.1:8000/api/v1/auth/token/login/ - Login endpoint
 
 ```python
@@ -89,12 +90,14 @@ curl --location --request POST 'http://127.0.0.1:8000/api/v1/auth/token/login/' 
 
 ```
 
+
 POST http://127.0.0.1:8000/api/v1/quotes/ - Post quotes endpoint
 
 ```python
 curl --location --request POST 'http://127.0.0.1:8000/api/v1/quotes/' \
 --header 'Authorization: Token {{API_KEY}}' \
 ```
+
 
 GET http://127.0.0.1:8000/api/v1/quotes/ - List of quotes endpoint 
 
