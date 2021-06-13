@@ -32,7 +32,7 @@ $ source venv/bin/activate
 
 ## How to Setup 
 
-- Click here to [ALPHAVANTAGE API_KEY](https://www.alphavantage.co/support/#api-key)
+- Click here to get [ALPHAVANTAGE API_KEY](https://www.alphavantage.co/support/#api-key)
 - Change `.env_example` to `.env`
 - Add your `ALPHAVANTAGE_ACCESS_KEY` into your `.env` file
 
